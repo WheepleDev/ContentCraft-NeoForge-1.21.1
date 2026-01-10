@@ -1,0 +1,13 @@
+{
+  "itemGroup.contentcraft": "Example Mod Tab",
+  "block.contentcraft.example_block": "Example Block",
+  "item.contentcraft.example_item": "Example Item",
+
+  "contentcraft.configuration.title": "Contentcraft Configs",
+  "contentcraft.configuration.section.contentcraft.common.toml": "Contentcraft Configs",
+  "contentcraft.configuration.section.contentcraft.common.toml.title": "Contentcraft Configs",
+  "contentcraft.configuration.items": "Item List",
+  "contentcraft.configuration.logDirtBlock": "Log Dirt Block",
+  "contentcraft.configuration.magicNumberIntroduction": "Magic Number Text",
+  "contentcraft.configuration.magicNumber": "Magic Number"
+}
