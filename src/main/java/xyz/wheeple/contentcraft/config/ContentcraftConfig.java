@@ -1,4 +1,4 @@
-package xyz.hakerboi.contentcraft.config;
+package xyz.wheeple.contentcraft.config;
 
 import java.util.List;
 

@@ -1,0 +1,11 @@
+{
+  "type": "contentcraft:alloy_forge",
+  "ingredient": { "item": "minecraft:raw_copper" },
+  "ingredient1": { "item": "minecraft:raw_copper" },
+  "ingredient2": { "item": "minecraft:raw_copper" },
+  "ingredient3": { "item": "minecraft:raw_copper" },
+  "result": {
+    "id": "minecraft:copper_ingot",
+    "count": 4
+  }
+}

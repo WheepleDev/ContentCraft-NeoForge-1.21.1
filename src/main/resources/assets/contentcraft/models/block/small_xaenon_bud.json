@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "contentcraft:block/small_xaenon_bud"
+  }
+}

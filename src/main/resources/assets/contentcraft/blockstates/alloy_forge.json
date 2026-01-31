@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,lit=false": { "model": "contentcraft:block/alloy_forge" },
+    "facing=east,lit=false": { "model": "contentcraft:block/alloy_forge", "y": 90 },
+    "facing=south,lit=false": { "model": "contentcraft:block/alloy_forge", "y": 180 },
+    "facing=west,lit=false": { "model": "contentcraft:block/alloy_forge", "y": 270 },
+    "facing=north,lit=true": { "model": "contentcraft:block/alloy_forge_on" },
+    "facing=east,lit=true": { "model": "contentcraft:block/alloy_forge_on", "y": 90 },
+    "facing=south,lit=true": { "model": "contentcraft:block/alloy_forge_on", "y": 180 },
+    "facing=west,lit=true": { "model": "contentcraft:block/alloy_forge_on", "y": 270 }
+  }
+}

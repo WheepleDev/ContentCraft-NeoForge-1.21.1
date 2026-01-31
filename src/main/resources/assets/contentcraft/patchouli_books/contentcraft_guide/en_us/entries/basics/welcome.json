@@ -1,0 +1,19 @@
+{
+  "name": "Welcome to ContentCraft",
+  "icon": "minecraft:firework_rocket",
+  "category": "contentcraft:basics",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "ContentCraft is a unique Minecraft mod created with one goal in mind, to add what features Mojang won’t, while making it feel like Mojang did add it. It introduces new content, mechanics, and features that seamlessly blend into the vanilla experience, breathing fresh life into the game you already know and love."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/icon_patchouli.png"
+      ],
+      "text": "       Contentcraft's Logo"
+    }
+  ]
+}

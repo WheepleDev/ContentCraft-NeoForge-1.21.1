@@ -1,0 +1,12 @@
+{
+  "type": "contentcraft:alloy_forge",
+  "ingredient": { "item": "contentcraft:xaenon_shard"  },
+  "ingredient1": { "item": "contentcraft:xaenon_shard" },
+  "ingredient2": { "item": "contentcraft:netherite_chunk" },
+  "ingredient3": { "item": "contentcraft:netherite_chunk" },
+  "result": {
+    "id": "contentcraft:xaenon_ingot",
+    "count": 2
+  },
+  "progress": 2400
+}

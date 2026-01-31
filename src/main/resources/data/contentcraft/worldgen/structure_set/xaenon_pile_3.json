@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "weight": 1,
+      "structure": "contentcraft:xaenon_pile_3"
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "separation": 8,
+    "spacing": 16,
+    "salt": 3333
+  }
+}

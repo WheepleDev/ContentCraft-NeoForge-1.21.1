@@ -1,0 +1,12 @@
+{
+  "type": "contentcraft:alloy_forge",
+  "ingredient": { "item": "minecraft:raw_gold_block" },
+  "ingredient1": { "item": "minecraft:raw_gold_block" },
+  "ingredient2": { "item": "minecraft:raw_gold_block" },
+  "ingredient3": { "item": "minecraft:raw_gold_block" },
+  "result": {
+    "id": "minecraft:gold_block",
+    "count": 4
+  },
+  "progress": 2000
+}

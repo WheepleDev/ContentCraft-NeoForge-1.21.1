@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "contentcraft:block/small_xaenon_bud"
+  }
+}

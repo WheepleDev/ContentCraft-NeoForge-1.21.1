@@ -1,0 +1,25 @@
+package xyz.wheeple.contentcraft.init;
+
+
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import xyz.wheeple.contentcraft.Contentcraft;
+import xyz.wheeple.contentcraft.block.alloyforge.AlloyForgeBlockEntity;
+
+import java.util.function.Supplier;
+
+public class ModBlockEntities {
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
+            DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, Contentcraft.MOD_ID);
+
+
+    public static final Supplier<BlockEntityType<AlloyForgeBlockEntity>> ALLOY_FORGE_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("alloy_forge_block_entity", () -> BlockEntityType.Builder.of(
+                    AlloyForgeBlockEntity::new, ModBlocks.ALLOY_FORGE.get()).build(null));
+
+    public static void register(IEventBus eventBus) {
+        BLOCK_ENTITIES.register(eventBus);
+    }
+}

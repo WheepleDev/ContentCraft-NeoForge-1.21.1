@@ -1,4 +1,4 @@
-package xyz.hakerboi.contentcraft;
+package xyz.wheeple.contentcraft;
 
 import net.neoforged.fml.ModList;
 import org.slf4j.Logger;
@@ -13,7 +13,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import xyz.hakerboi.contentcraft.config.ContentcraftConfig;
+import xyz.wheeple.contentcraft.config.ContentcraftConfig;
+import xyz.wheeple.contentcraft.init.*;
 
 @Mod(Contentcraft.MOD_ID)
 public class Contentcraft {
@@ -25,13 +26,30 @@ public class Contentcraft {
         ##                                        ##
         ##           |- Contentcraft -|           ##
         ##                V.%s                 ##
-        ##            Made by Hakerboi            ##
+        ##            Made by Wheeple             ##
         ##                                        ##
         ############################################""";
 
     public Contentcraft(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
+        Contentcraft.LOGGER.info("Registering Items...");
+        ModItems.register(modEventBus);
+
+        Contentcraft.LOGGER.info("Registering Blocks...");
+        ModBlocks.register(modEventBus);
+
+        Contentcraft.LOGGER.info("Registering Creative Mode Tabs...");
+        ModCreativeModeTabs.register(modEventBus);
+
+        Contentcraft.LOGGER.info("Registering Block Entities...");
+        ModBlockEntities.register(modEventBus);
+
+        Contentcraft.LOGGER.info("Registering Menu Types...");
+        ModMenuTypes.register(modEventBus);
+
+        Contentcraft.LOGGER.info("Registering Recipes...");
+        ModRecipes.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -44,7 +62,7 @@ public class Contentcraft {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info(STARTUP_TEXT.formatted(version));
+
     }
 
 

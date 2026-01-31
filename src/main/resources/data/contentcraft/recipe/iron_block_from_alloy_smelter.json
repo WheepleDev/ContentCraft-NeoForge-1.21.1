@@ -1,0 +1,12 @@
+{
+  "type": "contentcraft:alloy_forge",
+  "ingredient": { "item": "minecraft:raw_iron_block" },
+  "ingredient1": { "item": "minecraft:raw_iron_block" },
+  "ingredient2": { "item": "minecraft:raw_iron_block" },
+  "ingredient3": { "item": "minecraft:raw_iron_block" },
+  "result": {
+    "id": "minecraft:iron_block",
+    "count": 4
+  },
+  "progress": 2200
+}

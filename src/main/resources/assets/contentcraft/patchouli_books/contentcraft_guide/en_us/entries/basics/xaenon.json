@@ -1,0 +1,35 @@
+{
+  "name": "Xaenon",
+  "icon": "contentcraft:xaenon_ingot",
+  "category": "contentcraft:basics",
+  "sortnum": 3,
+  "pages": [
+    {
+      "anchor": "xaenondesc",
+      "type": "patchouli:text",
+      "text": "Xaenon is a new endgame material, only found in the End Dimension. You can get xaenon shards from budding xaenon crystal blocks, which spawn in piles in the end."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/xaenon_pile_1_patchouli.png",
+        "contentcraft:textures/patchouli_images/xaenon_pile_2_patchouli.png",
+        "contentcraft:textures/patchouli_images/xaenon_pile_3_patchouli.png",
+        "contentcraft:textures/patchouli_images/xaenon_pile_4_patchouli.png"
+      ],
+      "title": "Xaenon Pile Variants"
+    },
+    {
+      "anchor": "xaenoncrafting",
+      "type": "patchouli:text",
+      "text": "you can use xaenon shards to make xaenon ingots by putting it in an alloy forge along with a netherite chunk. Xaenon Ingots can be used to make other xaenon items, blocks and armor!$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/alloy_forge_xaenon_ingot_crafting_patchouli.png"
+      ],
+      "title": "Alloy Forge Recipe"
+    }
+  ]
+}

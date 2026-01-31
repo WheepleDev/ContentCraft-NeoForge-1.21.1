@@ -1,0 +1,12 @@
+{
+  "type": "contentcraft:alloy_forge",
+  "ingredient": { "item": "minecraft:netherite_scrap" },
+  "ingredient1": { "item": "minecraft:netherite_scrap" },
+  "ingredient2": { "item": "minecraft:gold_ingot" },
+  "ingredient3": { "item": "minecraft:gold_ingot" },
+  "result": {
+    "id": "contentcraft:netherite_chunk",
+    "count": 1
+  },
+  "progress": 1200
+}
