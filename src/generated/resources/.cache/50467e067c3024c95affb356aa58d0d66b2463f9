@@ -1,0 +1,3 @@
+// 1.21.1	2026-01-27T19:54:06.088645	Tags for minecraft:block mod id contentcraft
+034d1f4b21f03106af81ed21e12a41b55bdfc9bd data/minecraft/tags/block/mineable/pickaxe.json
+6fe3a223bd382004aa1b5f09e74fd92aed195a8c data/minecraft/tags/block/needs_diamond_tool.json
