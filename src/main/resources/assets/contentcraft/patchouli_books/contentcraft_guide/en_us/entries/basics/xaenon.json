@@ -2,7 +2,7 @@
   "name": "Xaenon",
   "icon": "contentcraft:xaenon_ingot",
   "category": "contentcraft:basics",
-  "sortnum": 3,
+  "sortnum": 2,
   "pages": [
     {
       "anchor": "xaenondesc",

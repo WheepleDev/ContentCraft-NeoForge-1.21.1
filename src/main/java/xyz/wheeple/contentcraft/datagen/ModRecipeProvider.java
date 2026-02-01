@@ -35,15 +35,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Blocks.BLAST_FURNACE)
                 .unlockedBy("has_blast_furnace", has(Blocks.BLAST_FURNACE)).save(recipeOutput);
 
-//        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Items.NETHERITE_INGOT)
-//                .pattern("NN")
-//                .pattern("NN")
-//                .define('N', ModItems.NETHERITE_CHUNK.get())
-//                .unlockedBy("has_netherite_chunk", has(ModItems.NETHERITE_CHUNK)).save(recipeOutput);
-//
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.XAENON_INGOT.get(), 9)
-//                .requires(ModBlocks.XAENON_BLOCK)
-//                .unlockedBy("has_xaenon_block", has(ModBlocks.XAENON_BLOCK)).save(recipeOutput);
+//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.ROOTED_DIRT, 1)
+//                .requires(Blocks.DIRT)
+//                .requires(Items.HANGING_ROOTS)
+//                .unlockedBy("has_dirt_block", has(Blocks.DIRT)).save(recipeOutput);
 //
 //        oreSmelting(recipeOutput, XAENON_SMELTABLES, RecipeCategory.MISC, ModItems.XAENON_INGOT.get(), 0.25f, 200, "xaenon");
 //        oreBlasting(recipeOutput, XAENON_SMELTABLES, RecipeCategory.MISC, ModItems.XAENON_INGOT.get(), 0.25f, 100, "xaenon");

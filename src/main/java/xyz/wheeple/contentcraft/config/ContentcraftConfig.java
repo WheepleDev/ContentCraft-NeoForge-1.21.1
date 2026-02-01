@@ -1,30 +1,22 @@
 package xyz.wheeple.contentcraft.config;
 
-import java.util.List;
-
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 public class ContentcraftConfig {
+
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
     public static final ModConfigSpec.BooleanValue DEBUG_MODE = BUILDER
-            .comment("Debug Mode...")
-            .define("DebugMode", false);
-//
-//    public static final ModConfigSpec.IntValue MAGIC_NUMBER = BUILDER
-//            .comment("A magic number")
-//            .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
-//
-//    public static final ModConfigSpec.ConfigValue<String> MAGIC_NUMBER_INTRODUCTION = BUILDER
-//            .comment("What you want the introduction message to be for the magic number")
-//            .define("magicNumberIntroduction", "The magic number is... ");
-//
-//    // a list of strings that are treated as resource locations for items
-//    public static final ModConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
-//            .comment("A list of items to log on common setup.")
-//            .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), () -> "", ContentcraftConfig::validateItemName);
+            .comment("Enable debug logging")
+            .define("debugMode", false);
+
+    public static final ModConfigSpec.IntValue ALLOY_FORGE_MAX_LAVA = BUILDER
+            .comment("Maximum lava (mB) the Alloy Forge can store")
+            .defineInRange("maxLava", 64000, 1000, 1000000);
+
+    public static final ModConfigSpec.IntValue ALLOY_FORGE_LAVA_PER_OPERATION = BUILDER
+            .comment("Lava (mB) consumed per Alloy Forge operation")
+            .defineInRange("lavaPerOperation", 500, 1, 10000);
 
     public static final ModConfigSpec SPEC = BUILDER.build();
 }

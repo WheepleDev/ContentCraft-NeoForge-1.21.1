@@ -4,6 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.Connection;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
@@ -24,13 +25,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.fluids.FluidActionResult;
-import net.neoforged.neoforge.fluids.FluidUtil;
 import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.FluidUtil;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.templates.FluidTank;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.items.wrapper.RangedWrapper;
 import org.jetbrains.annotations.Nullable;
+import xyz.wheeple.contentcraft.config.ContentcraftConfig;
 import xyz.wheeple.contentcraft.init.ModBlockEntities;
 import xyz.wheeple.contentcraft.init.ModRecipes;
 import xyz.wheeple.contentcraft.recipe.alloyforge.AlloyForgeRecipe;
@@ -48,16 +51,36 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
     public static final int FLUID_SLOT   = 5;
     public static final int SLOT_COUNT   = 6;
 
-    public static final int MAX_LAVA = 16000;
-    private static final int LAVA_PER_OPERATION = 100;
     private static final int DEFAULT_MAX_PROGRESS = 300;
 
-    public final ItemStackHandler itemHandler = new ItemStackHandler(SLOT_COUNT);
+    public final ItemStackHandler itemHandler = new ItemStackHandler(SLOT_COUNT) {
+        @Override
+        protected void onContentsChanged(int slot) {
+            setChanged();
+        }
+
+        @Override
+        public boolean isItemValid(int slot, ItemStack stack) {
+            return switch (slot) {
+                case OUTPUT_SLOT -> false;
+                case FLUID_SLOT -> stack.getCapability(Capabilities.FluidHandler.ITEM) != null || stack.is(Items.LAVA_BUCKET);
+                default -> true;
+            };
+        }
+    };
+
+    // --- Ranged Wrappers for Automation ---
+    // Slots 0, 1, 2, 3 (The crafting inputs)
+    private final IItemHandler inputHandler = new RangedWrapper(itemHandler, 0, 4);
+    // Slot 4 (The output)
+    private final IItemHandler outputHandler = new RangedWrapper(itemHandler, 4, 5);
+    // Slot 5 (The fluid/bucket slot)
+    private final IItemHandler fluidItemHandler = new RangedWrapper(itemHandler, 5, 6);
 
     private int progress = 0;
     private int maxProgress = DEFAULT_MAX_PROGRESS;
 
-    private final FluidTank lavaTank = new FluidTank(MAX_LAVA) {
+    private final FluidTank lavaTank = new FluidTank(getMaxLava()) {
         @Override
         protected void onContentsChanged() {
             setChanged();
@@ -79,7 +102,7 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
                 case 0 -> progress;
                 case 1 -> maxProgress;
                 case 2 -> lavaTank.getFluidAmount();
-                case 3 -> MAX_LAVA;
+                case 3 -> getMaxLava();
                 default -> 0;
             };
         }
@@ -100,16 +123,81 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
         super(ModBlockEntities.ALLOY_FORGE_BLOCK_ENTITY.get(), pos, state);
     }
 
+    /**
+     * This is the logic that handles Hoppers/Pipes.
+     * DOWN (Bottom) -> Output Slot
+     * NORTH, SOUTH, EAST, WEST, UP -> Input Slots
+     */
+    public IItemHandler getItemHandler(@Nullable Direction side) {
+        if (side == null) return itemHandler; // Internal/GUI access
+
+        return switch (side) {
+            case DOWN -> outputHandler;  // Bottom extracts output
+            default -> inputHandler;     // All other sides (Top/Sides) insert ingredients
+        };
+    }
+
+    public IFluidHandler getFluidHandler(@Nullable Direction side) {
+        return lavaTank;
+    }
+
+    public FluidTank getLavaTank() {
+        return this.lavaTank;
+    }
+
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        CompoundTag nbt = super.getUpdateTag(registries);
+        saveAdditional(nbt, registries);
+        return nbt;
+    }
+
+    @Override
+    public void handleUpdateTag(CompoundTag tag, HolderLookup.Provider registries) {
+        loadAdditional(tag, registries);
+    }
+
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    @Override
+    public void onDataPacket(Connection net, ClientboundBlockEntityDataPacket pkt, HolderLookup.Provider registries) {
+        CompoundTag nbt = pkt.getTag();
+        if (nbt != null) {
+            loadAdditional(nbt, registries);
+        }
+    }
+
+    public void drops() {
+        SimpleContainer inventory = new SimpleContainer(itemHandler.getSlots());
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            inventory.setItem(i, itemHandler.getStackInSlot(i));
+        }
+        if (this.level != null) {
+            Containers.dropContents(this.level, this.worldPosition, inventory);
+        }
+    }
+
+    public static int getMaxLava() {
+        return ContentcraftConfig.ALLOY_FORGE_MAX_LAVA.get();
+    }
+
+    public static int getLavaPerOperation() {
+        return ContentcraftConfig.ALLOY_FORGE_LAVA_PER_OPERATION.get();
+    }
+
     public boolean addLavaFromBucket(Player player, ItemStack stack) {
-        if (lavaTank.getFluidAmount() + 1000 > lavaTank.getCapacity()) return false;
         if (stack.getItem() != Items.LAVA_BUCKET) return false;
+        if (lavaTank.getFluidAmount() + 1000 > getMaxLava()) return false;
 
         lavaTank.fill(new FluidStack(Fluids.LAVA, 1000), IFluidHandler.FluidAction.EXECUTE);
 
         if (!player.isCreative()) {
             player.setItemInHand(player.getUsedItemHand(), new ItemStack(Items.BUCKET));
         }
-
         return true;
     }
 
@@ -149,16 +237,20 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
 
         if (hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             progress++;
-            level.setBlockAndUpdate(pos, state.setValue(AlloyForgeBlock.LIT, true));
+            if (!state.getValue(AlloyForgeBlock.LIT)) {
+                level.setBlockAndUpdate(pos, state.setValue(AlloyForgeBlock.LIT, true));
+            }
 
             if (progress >= maxProgress) {
                 craftItem();
-                lavaTank.drain(LAVA_PER_OPERATION, IFluidHandler.FluidAction.EXECUTE);
+                lavaTank.drain(getLavaPerOperation(), IFluidHandler.FluidAction.EXECUTE);
                 resetProgress();
             }
         } else {
-            resetProgress();
-            level.setBlockAndUpdate(pos, state.setValue(AlloyForgeBlock.LIT, false));
+            if (progress > 0) resetProgress();
+            if (state.getValue(AlloyForgeBlock.LIT)) {
+                level.setBlockAndUpdate(pos, state.setValue(AlloyForgeBlock.LIT, false));
+            }
         }
     }
 
@@ -167,28 +259,17 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
         maxProgress = DEFAULT_MAX_PROGRESS;
     }
 
-    private boolean hasFluidStackInSlot() {
-        ItemStack stack = itemHandler.getStackInSlot(FLUID_SLOT);
-        if (stack.isEmpty()) return false;
-        var cap = stack.getCapability(Capabilities.FluidHandler.ITEM);
-        return cap != null && cap.getFluidInTank(0).getFluid() == Fluids.LAVA;
-    }
+    private boolean hasRecipe() {
+        Optional<AlloyForgeRecipe> recipe = getCurrentRecipe();
+        if (recipe.isEmpty()) return false;
 
-    private void transferFluidToTank() {
-        ItemStack stack = itemHandler.getStackInSlot(FLUID_SLOT);
-        if (stack.isEmpty()) return;
-
-        FluidActionResult result = FluidUtil.tryEmptyContainer(
-                stack,
-                lavaTank,
-                lavaTank.getCapacity() - lavaTank.getFluidAmount(),
-                null,
-                true
-        );
-
-        if (result.isSuccess()) {
-            itemHandler.setStackInSlot(FLUID_SLOT, result.getResult());
+        if (progress == 0) {
+            maxProgress = recipe.get().getProgress();
         }
+
+        ItemStack output = recipe.get().getResultItem(level.registryAccess());
+        return lavaTank.getFluidAmount() >= getLavaPerOperation()
+                && canInsertIntoOutput(output);
     }
 
     private Optional<AlloyForgeRecipe> getCurrentRecipe() {
@@ -206,20 +287,6 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
                 .map(RecipeHolder::value);
     }
 
-    private boolean hasRecipe() {
-        Optional<AlloyForgeRecipe> recipe = getCurrentRecipe();
-        if (recipe.isEmpty()) return false;
-
-        if (progress == 0) {
-            maxProgress = recipe.get().getProgress();
-        }
-
-        ItemStack output = recipe.get().getResultItem(level.registryAccess());
-        return lavaTank.getFluidAmount() >= LAVA_PER_OPERATION
-                && canInsertItemIntoOutputSlot(output)
-                && canInsertAmountIntoOutputSlot(output.getCount());
-    }
-
     private void craftItem() {
         Optional<AlloyForgeRecipe> recipe = getCurrentRecipe();
         if (recipe.isEmpty()) return;
@@ -231,49 +298,43 @@ public class AlloyForgeBlockEntity extends BlockEntity implements MenuProvider {
         }
 
         ItemStack current = itemHandler.getStackInSlot(OUTPUT_SLOT);
-        if (current.isEmpty()) {
-            itemHandler.setStackInSlot(OUTPUT_SLOT, output.copy());
-        } else {
-            current.grow(output.getCount());
+        if (current.isEmpty()) itemHandler.setStackInSlot(OUTPUT_SLOT, output.copy());
+        else current.grow(output.getCount());
+    }
+
+    private boolean canInsertIntoOutput(ItemStack result) {
+        ItemStack current = itemHandler.getStackInSlot(OUTPUT_SLOT);
+        if (current.isEmpty()) return true;
+        if (!ItemStack.isSameItemSameComponents(current, result)) return false;
+        return current.getCount() + result.getCount() <= current.getMaxStackSize();
+    }
+
+    private boolean hasFluidStackInSlot() {
+        ItemStack stack = itemHandler.getStackInSlot(FLUID_SLOT);
+        if (stack.isEmpty()) return false;
+        var cap = stack.getCapability(Capabilities.FluidHandler.ITEM);
+        return cap != null && cap.getFluidInTank(0).getFluid() == Fluids.LAVA;
+    }
+
+    private void transferFluidToTank() {
+        ItemStack stack = itemHandler.getStackInSlot(FLUID_SLOT);
+        if (stack.isEmpty()) return;
+
+        FluidActionResult result = FluidUtil.tryEmptyContainer(
+                stack,
+                lavaTank,
+                getMaxLava() - lavaTank.getFluidAmount(),
+                null,
+                true
+        );
+
+        if (result.isSuccess()) {
+            itemHandler.setStackInSlot(FLUID_SLOT, result.getResult());
         }
     }
 
     private boolean isOutputSlotEmptyOrReceivable() {
         ItemStack stack = itemHandler.getStackInSlot(OUTPUT_SLOT);
         return stack.isEmpty() || stack.getCount() < stack.getMaxStackSize();
-    }
-
-    private boolean canInsertItemIntoOutputSlot(ItemStack output) {
-        ItemStack current = itemHandler.getStackInSlot(OUTPUT_SLOT);
-        return current.isEmpty() || current.getItem() == output.getItem();
-    }
-
-    private boolean canInsertAmountIntoOutputSlot(int count) {
-        ItemStack current = itemHandler.getStackInSlot(OUTPUT_SLOT);
-        int max = current.isEmpty() ? 64 : current.getMaxStackSize();
-        return current.getCount() + count <= max;
-    }
-
-    public void drops() {
-        SimpleContainer container = new SimpleContainer(itemHandler.getSlots());
-        for (int i = 0; i < itemHandler.getSlots(); i++) {
-            container.setItem(i, itemHandler.getStackInSlot(i));
-        }
-        Containers.dropContents(level, worldPosition, container);
-    }
-
-    @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
-        return saveWithoutMetadata(registries);
-    }
-
-    @Nullable
-    @Override
-    public Packet<ClientGamePacketListener> getUpdatePacket() {
-        return ClientboundBlockEntityDataPacket.create(this);
-    }
-
-    public FluidTank getLavaTank() {
-        return lavaTank;
     }
 }

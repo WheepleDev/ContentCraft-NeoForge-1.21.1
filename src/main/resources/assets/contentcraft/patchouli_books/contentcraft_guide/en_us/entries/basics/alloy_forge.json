@@ -2,7 +2,7 @@
   "name": "Alloy Forge",
   "icon": "contentcraft:alloy_forge",
   "category": "contentcraft:basics",
-  "sortnum": 2,
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",

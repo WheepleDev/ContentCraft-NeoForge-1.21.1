@@ -1,7 +1,6 @@
 package xyz.wheeple.contentcraft.block.alloyforge;
 
 import com.mojang.blaze3d.systems.RenderSystem;
-
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
@@ -30,25 +29,16 @@ public class AlloyForgeScreen extends AbstractContainerScreen<AlloyForgeMenu> {
                     "textures/gui/alloy_forge/arrow_progress.png"
             );
 
-    // Fuel bar position (relative to GUI)
     private static final int FUEL_X = 26;
     private static final int FUEL_Y = 19;
 
-    private FluidTankRenderer fluidRenderer;
+    private final FluidTankRenderer fluidRenderer;
 
     public AlloyForgeScreen(AlloyForgeMenu menu, Inventory inv, Component title) {
         super(menu, inv, title);
-    }
 
-    @Override
-    protected void init() {
-        super.init();
-
-        this.inventoryLabelY = 10000;
-        this.titleLabelY = 10000;
-
-        // 50px tall lava bar, max lava from menu
-        fluidRenderer = new FluidTankRenderer(
+        // This will now correctly receive 64000
+        this.fluidRenderer = new FluidTankRenderer(
                 menu.getMaxLava(),
                 true,
                 16,
@@ -57,21 +47,29 @@ public class AlloyForgeScreen extends AbstractContainerScreen<AlloyForgeMenu> {
     }
 
     @Override
+    protected void init() {
+        super.init();
+        this.inventoryLabelY = 10000;
+        this.titleLabelY = 10000;
+    }
+
+    @Override
     protected void renderBg(GuiGraphics g, float partialTick, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
+        RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
 
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
-        // Background
         g.blit(GUI, x, y, 0, 0, imageWidth, imageHeight);
 
-        // Lava tank
+        // Render Lava with a safety check
         FluidStack lava = menu.getFluid();
-        fluidRenderer.render(g, x + FUEL_X, y + FUEL_Y, lava);
+        if (fluidRenderer != null && !lava.isEmpty()) {
+            fluidRenderer.render(g, x + FUEL_X, y + FUEL_Y, lava);
+        }
 
-        // Progress arrow
+        // Render Progress
         if (menu.isCrafting()) {
             g.blit(
                     ARROW,
@@ -92,7 +90,9 @@ public class AlloyForgeScreen extends AbstractContainerScreen<AlloyForgeMenu> {
         int x = (width - imageWidth) / 2;
         int y = (height - imageHeight) / 2;
 
-        renderFluidTooltip(g, mouseX, mouseY, x, y);
+        if (fluidRenderer != null) {
+            renderFluidTooltip(g, mouseX, mouseY, x, y);
+        }
     }
 
     private void renderFluidTooltip(GuiGraphics g, int mouseX, int mouseY, int guiX, int guiY) {

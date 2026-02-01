@@ -27,6 +27,27 @@
   "contentcraft.guidebook.name": "ContentCraft Guide",
   "contentcraft.guidebook.landing_text": "Hello there $(l)$(6)$(playername)$(), ContentCraft is a feature-rich Neoforge mod for Minecraft 1.21.x adding lots of new blocks, items, and tools for enhanced survival, exploration, and building.",
   "contentcraft.tooltip.liquid.amount.with.capacity": "%s / %s mB",
-  "contentcraft.tooltip.liquid.amount": "%s mB"
+  "contentcraft.tooltip.liquid.amount": "%s mB",
+  "item.contentcraft.xaenon_sword": "Xaenon Sword",
+  "tooltip.contentcraft.xaenon_sword.name": "<gradient-78>Xaenon Sword</gradient-82>",
+  "item.contentcraft.xaenon_pickaxe": "Xaenon Pickaxe",
+  "tooltip.contentcraft.xaenon_pickaxe.name": "<gradient-78>Xaenon Pickaxe</gradient-82>",
+  "item.contentcraft.xaenon_axe": "Xaenon Axe",
+  "tooltip.contentcraft.xaenon_axe.name": "<gradient-78>Xaenon Axe</gradient-82>",
+  "item.contentcraft.xaenon_shovel": "Xaenon Shovel",
+  "tooltip.contentcraft.xaenon_shovel.name": "<gradient-78>Xaenon Shovel</gradient-82>",
+  "item.contentcraft.xaenon_hoe": "Xaenon Hoe",
+  "tooltip.contentcraft.xaenon_hoe.name": "<gradient-78>Xaenon Hoe</gradient-82>",
+  "item.contentcraft.xaenon_helmet": "Xaenon Helmet",
+  "tooltip.contentcraft.xaenon_helmet.name": "<gradient-78>Xaenon Helmet</gradient-82>",
+  "item.contentcraft.xaenon_chestplate": "Xaenon Chestplate",
+  "tooltip.contentcraft.xaenon_chestplate.name": "<gradient-78>Xaenon Chestplate</gradient-82>",
+  "item.contentcraft.xaenon_leggings": "Xaenon Leggings",
+  "tooltip.contentcraft.xaenon_leggings.name": "<gradient-78>Xaenon Leggings</gradient-82>",
+  "item.contentcraft.xaenon_boots": "Xaenon Boots",
+  "tooltip.contentcraft.xaenon_boots.name": "<gradient-78>Xaenon Boots</gradient-82>",
+  "contentcraft.configuration.debugMode": "Debug Mode",
+  "contentcraft.configuration.maxLava": "Max Capacity for Alloy Forge",
+  "contentcraft.configuration.lavaPerOperation": "Lava per Alloy Forge craft"
 }
 

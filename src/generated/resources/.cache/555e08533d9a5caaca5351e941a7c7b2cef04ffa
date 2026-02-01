@@ -1,1 +1,8 @@
-// 1.21.1	2026-01-18T12:07:25.1778953	Tags for minecraft:item mod id contentcraft
+// 1.21.1	2026-01-31T18:38:49.4086513	Tags for minecraft:item mod id contentcraft
+dbd22a68591f89a4243a7796c446d5e52f08104c data/minecraft/tags/item/axes.json
+46f0f33cb121ff896f72259548d657e0e72c5292 data/minecraft/tags/item/hoes.json
+ea2fe9c57738c7327ba7d4954c7b4563b3ab45ed data/minecraft/tags/item/pickaxes.json
+3feac737c458f4ad97d987d1f3248b3edf004456 data/minecraft/tags/item/shovels.json
+4efe5c1a03d0af62ea15e02b8c8c92e42d5471d1 data/minecraft/tags/item/swords.json
+5781b45f535d71b84174c6e8aed65a745b7364e3 data/minecraft/tags/item/trimmable_armor.json
+2c9574d8616f0768d8e470e040c84f86a494a9d6 data/minecraft/tags/item/trim_materials.json

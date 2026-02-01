@@ -1,0 +1,17 @@
+{
+  "name": "Rooted Dirt Recipe",
+  "icon": "minecraft:rooted_dirt",
+  "category": "contentcraft:qol",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I decided to add this recipe because i was watching $(l:https://www.youtube.com/@daltona.c.e)ACE$() and he was making a rooted dirt farm and it didnt work, so then he crashed out. This ones for you Ace :D."
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": "Rooted Dirt Recipe",
+      "recipe": "minecraft:rooted_dirt_patchouli"
+    }
+  ]
+}

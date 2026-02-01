@@ -22,15 +22,30 @@ public class ModCreativeModeTabs {
                             .icon(() -> new ItemStack(ModItems.XAENON_INGOT.get()))
                             .displayItems((parameters, output) -> {
                                 output.accept(ModItems.CONTENTCRAFT_GUIDE.get());
+
                                 output.accept(ModItems.XAENON_INGOT.get());
                                 output.accept(ModItems.XAENON_SHARD.get());
                                 output.accept(ModBlocks.XAENON_BLOCK.get());
+
                                 output.accept(ModBlocks.XAENON_CRYSTAL_BLOCK.get());
                                 output.accept(ModBlocks.BUDDING_XAENON_CRYSTAL_BLOCK.get());
+
                                 output.accept(ModBlocks.SMALL_XAENON_BUD.get());
                                 output.accept(ModBlocks.MEDIUM_XAENON_BUD.get());
                                 output.accept(ModBlocks.LARGE_XAENON_BUD.get());
                                 output.accept(ModBlocks.XAENON_CLUSTER.get());
+
+                                output.accept(ModItems.XAENON_HELMET.get());
+                                output.accept(ModItems.XAENON_CHESTPLATE.get());
+                                output.accept(ModItems.XAENON_LEGGINGS.get());
+                                output.accept(ModItems.XAENON_BOOTS.get());
+
+                                output.accept(ModItems.XAENON_SWORD.get());
+                                output.accept(ModItems.XAENON_AXE.get());
+                                output.accept(ModItems.XAENON_PICKAXE.get());
+                                output.accept(ModItems.XAENON_SHOVEL.get());
+                                output.accept(ModItems.XAENON_HOE.get());
+
                                 output.accept(ModBlocks.ALLOY_FORGE.get());
                                 output.accept(ModItems.NETHERITE_CHUNK.get());
 
