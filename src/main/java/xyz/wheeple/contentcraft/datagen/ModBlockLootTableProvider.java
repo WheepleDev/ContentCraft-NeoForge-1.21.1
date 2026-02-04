@@ -40,7 +40,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 )
         );
         dropSelf(ModBlocks.ALLOY_FORGE.get());
+        dropSelf(ModBlocks.STEEL_BLOCK.get());
 
+        this.dropSelf(ModBlocks.MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+        this.dropSelf(ModBlocks.MAPLE_PLANKS.get());
+        this.dropSelf(ModBlocks.MAPLE_SAPLING.get());
+
+        this.add(ModBlocks.MAPLE_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MAPLE_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

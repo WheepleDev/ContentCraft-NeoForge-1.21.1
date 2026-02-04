@@ -24,8 +24,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     @Override
     protected void buildRecipes(RecipeOutput recipeOutput) {
-//        List<ItemLike> XAENON_SMELTABLES = List.of(ModItems.RAW_XAENON, ModBlocks.XAENON_ORE);
-//
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALLOY_FORGE.get())
                 .pattern("IBI")
                 .pattern("IBI")
@@ -35,10 +33,21 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', Blocks.BLAST_FURNACE)
                 .unlockedBy("has_blast_furnace", has(Blocks.BLAST_FURNACE)).save(recipeOutput);
 
-//        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.ROOTED_DIRT, 1)
-//                .requires(Blocks.DIRT)
-//                .requires(Items.HANGING_ROOTS)
-//                .unlockedBy("has_dirt_block", has(Blocks.DIRT)).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_BLOCK.get())
+                .pattern("XXX")
+                .pattern("XXX")
+                .pattern("XXX")
+                .define('X', ModItems.STEEL_INGOT.get())
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.STEEL_INGOT.get(), 9)
+                .requires(ModBlocks.STEEL_BLOCK)
+                .unlockedBy("has_steel_block", has(ModBlocks.STEEL_BLOCK)).save(recipeOutput);
+
+
+
+
+//        List<ItemLike> XAENON_SMELTABLES = List.of(ModItems.RAW_XAENON, ModBlocks.XAENON_ORE);
 //
 //        oreSmelting(recipeOutput, XAENON_SMELTABLES, RecipeCategory.MISC, ModItems.XAENON_INGOT.get(), 0.25f, 200, "xaenon");
 //        oreBlasting(recipeOutput, XAENON_SMELTABLES, RecipeCategory.MISC, ModItems.XAENON_INGOT.get(), 0.25f, 100, "xaenon");

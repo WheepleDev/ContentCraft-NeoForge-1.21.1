@@ -1,6 +1,8 @@
-// 1.21.1	2026-01-31T18:38:49.3975129	Item Models: contentcraft
+// 1.21.1	2026-02-02T17:01:25.0683639	Item Models: contentcraft
 343b8a8afa7c6f7c05558b120e0897a90593a9a9 assets/contentcraft/models/item/contentcraft_guide.json
+20c2b379e610585e7623e5806a64ff7a2bbccfd9 assets/contentcraft/models/item/maple_sapling.json
 6ee28ec9587142533e56537d468e88f582f99d3d assets/contentcraft/models/item/netherite_chunk.json
+84a3e653668feaaad6a020d71c18d85486ef6afd assets/contentcraft/models/item/steel_ingot.json
 65a422aed896148cfe2bd3790fa1c70de7da3e6d assets/contentcraft/models/item/xaenon_axe.json
 4050fd784d1f947b16897d4370d7d6797290ca84 assets/contentcraft/models/item/xaenon_boots.json
 a1656f93efa482d3c3ddef7aa3cbb0abbf0713da assets/contentcraft/models/item/xaenon_boots_amethyst_trim.json

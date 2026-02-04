@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
 import xyz.wheeple.contentcraft.Contentcraft;
+import xyz.wheeple.contentcraft.init.ModBlocks;
 import xyz.wheeple.contentcraft.init.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -41,5 +42,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
         this.tag(ItemTags.TRIM_MATERIALS)
                 .add(ModItems.XAENON_INGOT.get());
 
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAPLE_LOG.get().asItem())
+                .add(ModBlocks.MAPLE_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_MAPLE_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_MAPLE_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.MAPLE_PLANKS.asItem());
     }
 }

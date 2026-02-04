@@ -1,12 +1,12 @@
 {
   "name": "Alloy Forge",
   "icon": "contentcraft:alloy_forge",
-  "category": "contentcraft:basics",
+  "category": "contentcraft:blocks",
   "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The Alloy Forge is a new crafting block based off the Blast Furnace, it allows you to bulk smelt ores, as well as craft new materials like $(l:contentcraft:basics/xaenon)Xaenon$() as well as $(l:contentcraft:basics/netherite_chunk)Netherite Chunks$().$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
+      "text": "The Alloy Forge is a new crafting block based off the Blast Furnace, it allows you to bulk smelt ores, as well as craft new materials like $(l:contentcraft:materials/xaenon)Xaenon$() as well as $(l:contentcraft:materials/netherite_chunk)Netherite Chunks$().$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
     },
     {
       "type": "patchouli:crafting",

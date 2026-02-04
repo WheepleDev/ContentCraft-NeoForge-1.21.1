@@ -1,0 +1,6 @@
+{
+  "name": "Items",
+  "description": "All the Items in contentcraft",
+  "icon": "minecraft:iron_ingot",
+  "sortnum": 1
+}

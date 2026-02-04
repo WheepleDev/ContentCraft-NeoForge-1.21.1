@@ -1,8 +1,8 @@
 {
   "name": "Xaenon",
   "icon": "contentcraft:xaenon_ingot",
-  "category": "contentcraft:basics",
-  "sortnum": 2,
+  "category": "contentcraft:materials",
+  "sortnum": 0,
   "pages": [
     {
       "anchor": "xaenondesc",
@@ -22,7 +22,7 @@
     {
       "anchor": "xaenoncrafting",
       "type": "patchouli:text",
-      "text": "you can use xaenon shards to make xaenon ingots by putting it in an alloy forge along with a netherite chunk. Xaenon Ingots can be used to make other xaenon items, blocks and armor!$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
+      "text": "you can use xaenon shards to make xaenon ingots by putting it in an $(l:contentcraft:blocks/alloy_forge)Alloy Forge$() along with a $(l:contentcraft:materials/netherite_chunk)Netherite Chunks$(). Xaenon Ingots can be used to make other xaenon items, blocks and armor!$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
     },
     {
       "type": "patchouli:image",

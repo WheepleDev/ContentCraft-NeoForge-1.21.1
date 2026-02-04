@@ -1,12 +1,12 @@
 {
   "name": "Netherite Chunk",
   "icon": "contentcraft:netherite_chunk",
-  "category": "contentcraft:basics",
-  "sortnum": 3,
+  "category": "contentcraft:materials",
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Netherite Chunks can be obtained by putting gold and netherite scraps into the $(l:contentcraft:basics/alloy_forge)Alloy Forge$().$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
+      "text": "Netherite Chunks can be obtained by putting gold and netherite scraps into the $(l:contentcraft:blocks/alloy_forge)Alloy Forge$().$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
     },
     {
       "type": "patchouli:image",

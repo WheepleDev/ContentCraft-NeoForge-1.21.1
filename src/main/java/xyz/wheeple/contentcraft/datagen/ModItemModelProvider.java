@@ -8,11 +8,15 @@ import net.minecraft.server.packs.PackType;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.armortrim.TrimMaterial;
 import net.minecraft.world.item.armortrim.TrimMaterials;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import xyz.wheeple.contentcraft.Contentcraft;
+import xyz.wheeple.contentcraft.init.ModBlocks;
 import xyz.wheeple.contentcraft.init.ModItems;
 
 import java.util.LinkedHashMap;
@@ -54,7 +58,16 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.XAENON_CHESTPLATE);
         trimmedArmorItem(ModItems.XAENON_LEGGINGS);
         trimmedArmorItem(ModItems.XAENON_BOOTS);
+
+        basicItem(ModItems.STEEL_INGOT.get());
+        saplingItem(ModBlocks.MAPLE_SAPLING);
         
+    }
+
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Contentcraft.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     // Shoutout to El_Redstoniano for making this

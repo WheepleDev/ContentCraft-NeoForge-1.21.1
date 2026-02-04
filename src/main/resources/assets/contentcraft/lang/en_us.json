@@ -5,7 +5,6 @@
   "item.contentcraft.xaenon_ingot": "Xaenon Ingot",
   "tooltip.contentcraft.xaenon_ingot.name": "<gradient-78>Xaenon Ingot</gradient-82>",
   "item.contentcraft.xaenon_shard": "Xaenon Shard",
-  "tooltip.contentcraft.netherite_chunk.name": "<gradient-01>Netherite Chunk</gradient-05>",
   "item.contentcraft.netherite_chunk": "Netherite Chunk",
   "tooltip.contentcraft.xaenon_shard.name": "<gradient-78>Xaenon Shard</gradient-82>",
   "block.contentcraft.xaenon_block": "Xaenon Block",
@@ -48,6 +47,23 @@
   "tooltip.contentcraft.xaenon_boots.name": "<gradient-78>Xaenon Boots</gradient-82>",
   "contentcraft.configuration.debugMode": "Debug Mode",
   "contentcraft.configuration.maxLava": "Max Capacity for Alloy Forge",
-  "contentcraft.configuration.lavaPerOperation": "Lava per Alloy Forge craft"
+  "contentcraft.configuration.lavaPerOperation": "Lava per Alloy Forge craft",
+  "item.contentcraft.steel_ingot": "Steel Ingot",
+  "block.contentcraft.steel_block": "Steel Block",
+  "block.contentcraft.maple_log": "Maple Log",
+  "block.contentcraft.stripped_maple_log": "Stripped Maple Log",
+  "block.contentcraft.maple_wood": "Maple Wood",
+  "block.contentcraft.stripped_maple_wood": "Stripped Maple Wood",
+  "block.contentcraft.maple_planks": "Maple Planks",
+  "block.contentcraft.maple_slab": "Maple Slab",
+  "block.contentcraft.maple_stairs": "Maple Stairs",
+  "block.contentcraft.maple_fence": "Maple Fence",
+  "block.contentcraft.maple_fence_gate": "Maple Fence Gate",
+  "block.contentcraft.maple_door": "Maple Door",
+  "block.contentcraft.maple_trapdoor": "Maple Trapdoor",
+  "block.contentcraft.maple_pressure_plate": "Maple Pressure Plate",
+  "block.contentcraft.maple_button": "Maple Button",
+  "block.contentcraft.maple_leaves": "Maple Leaves",
+  "block.contentcraft.maple_sapling": "Maple Sapling"
 }
 

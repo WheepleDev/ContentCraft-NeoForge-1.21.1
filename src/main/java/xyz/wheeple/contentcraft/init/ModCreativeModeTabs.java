@@ -49,6 +49,19 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.ALLOY_FORGE.get());
                                 output.accept(ModItems.NETHERITE_CHUNK.get());
 
+                                output.accept(ModItems.STEEL_INGOT.get());
+                                output.accept(ModBlocks.STEEL_BLOCK.get());
+
+                                output.accept(ModBlocks.MAPLE_LOG.get());
+                                output.accept(ModBlocks.MAPLE_WOOD.get());
+                                output.accept(ModBlocks.STRIPPED_MAPLE_LOG.get());
+                                output.accept(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+
+                                output.accept(ModBlocks.MAPLE_PLANKS.get());
+                                output.accept(ModBlocks.MAPLE_SAPLING.get());
+
+                                output.accept(ModBlocks.MAPLE_LEAVES.get());
+
                             })
                             .build()
             );

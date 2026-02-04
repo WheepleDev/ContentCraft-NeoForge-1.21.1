@@ -1,5 +1,13 @@
-// 1.21.1	2026-01-27T19:54:06.0903167	Loot Tables
+// 1.21.1	2026-02-02T17:01:25.0714589	Loot Tables
 88960023ea9230a0566752974e352791a0f97864 data/contentcraft/loot_table/blocks/alloy_forge.json
+f92928b735f56207d75402a824d7651010e96927 data/contentcraft/loot_table/blocks/maple_leaves.json
+b163c1e519bc043d8c63d73a1223edfa6a35d214 data/contentcraft/loot_table/blocks/maple_log.json
+255ec94e6e580ffd7830522c01fcaa36328d5ab1 data/contentcraft/loot_table/blocks/maple_planks.json
+1eb0677a74ee9a299d4d509a69209621f201fa14 data/contentcraft/loot_table/blocks/maple_sapling.json
+074a506307c713612a591f81da2f779c0e23cd18 data/contentcraft/loot_table/blocks/maple_wood.json
+9190cf0a586f38e92ecb885b1ca8e9bb78b3fdec data/contentcraft/loot_table/blocks/steel_block.json
+8820fcfec0be17ef07f353a062386d053f79e2b0 data/contentcraft/loot_table/blocks/stripped_maple_log.json
+e16ae9c8f51c8a44aea8119026a2f2ac3ae25b07 data/contentcraft/loot_table/blocks/stripped_maple_wood.json
 86cc66b8f170e7452d5900b8afe556493b2ef3c5 data/contentcraft/loot_table/blocks/xaenon_block.json
 fb5cc0f5e7b062177b15fa1176dbd306dfa310ed data/contentcraft/loot_table/blocks/xaenon_cluster.json
 7cd069eca1321ad48fa6be5cfe97c3a080041ae1 data/contentcraft/loot_table/blocks/xaenon_crystal_block.json

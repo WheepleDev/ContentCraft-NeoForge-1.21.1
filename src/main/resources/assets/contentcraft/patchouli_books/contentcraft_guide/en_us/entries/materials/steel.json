@@ -1,0 +1,25 @@
+{
+  "name": "Steel",
+  "icon": "contentcraft:steel_ingot",
+  "category": "contentcraft:materials",
+  "sortnum": 1,
+  "pages": [
+    {
+      "anchor": "steeldesc",
+      "type": "patchouli:text",
+      "text": "Steel is a new Midgame material, used for machinery and tech items."
+    },
+    {
+      "anchor": "steelcrafting",
+      "type": "patchouli:text",
+      "text": "you can make steel ingots by putting any iron item (blocks/ingots/raw) as well as a coal item (blocks/item) in an $(l:contentcraft:blocks/alloy_forge)Alloy Forge$().$(br2)$(6)$(l)TIP:$() you can use a mod like JEI to view all the recipes added by Contentcraft and other mods!"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/alloy_forge_steel_ingot_crafting_patchouli.png"
+      ],
+      "title": "Alloy Forge Recipe"
+    }
+  ]
+}

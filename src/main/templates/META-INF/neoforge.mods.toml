@@ -31,12 +31,19 @@ modId="libtooltips"
 type="required"
 versionRange="[1.4,)"
 ordering="NONE"
-side="BOTH"
+side="CLIENT"
 
 [[dependencies.${mod_id}]]
 modId="patchouli"
 type="required"
 versionRange="[1.21.1-92-NEOFORGE,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="terrablender"
+type="required"
+versionRange="[1.21.1-4.1.0.8,)"
 ordering="NONE"
 side="BOTH"
 

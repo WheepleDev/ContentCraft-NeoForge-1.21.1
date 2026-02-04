@@ -1,3 +1,7 @@
-// 1.21.1	2026-01-31T22:07:09.2927073	Recipes
+// 1.21.1	2026-02-01T22:13:55.966253	Recipes
 55a11dfe2c83357e615a0cbb7613c9c90b1cf1e0 data/contentcraft/advancement/recipes/misc/alloy_forge.json
+77c6b53c4c2ddef44cde33fe7ff1190811f89fe6 data/contentcraft/advancement/recipes/misc/steel_block.json
+5c12eb36952a327b832a24978cde00b6f1ad2274 data/contentcraft/advancement/recipes/misc/steel_ingot.json
 53d3cc973f7e4a03075a5c626c2aae511016374b data/contentcraft/recipe/alloy_forge.json
+6775721c76c8c6b4ce4395c7ca984f9c79f859cb data/contentcraft/recipe/steel_block.json
+c7d01b6f952519099fbb98c413534368e0d52dae data/contentcraft/recipe/steel_ingot.json

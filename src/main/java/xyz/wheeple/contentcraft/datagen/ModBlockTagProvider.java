@@ -27,16 +27,26 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MEDIUM_XAENON_BUD.get())
                 .add(ModBlocks.LARGE_XAENON_BUD.get())
                 .add(ModBlocks.ALLOY_FORGE.get())
+                .add(ModBlocks.STEEL_BLOCK.get())
 
 
         ;
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.XAENON_CRYSTAL_BLOCK.get())
+                .add(ModBlocks.BUDDING_XAENON_CRYSTAL_BLOCK.get())
                 .add(ModBlocks.XAENON_CLUSTER.get())
-
+                .add(ModBlocks.SMALL_XAENON_BUD.get())
+                .add(ModBlocks.MEDIUM_XAENON_BUD.get())
+                .add(ModBlocks.LARGE_XAENON_BUD.get())
 
 
                 ;
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAPLE_LOG.get())
+                .add(ModBlocks.MAPLE_WOOD.get())
+                .add(ModBlocks.STRIPPED_MAPLE_LOG.get())
+                .add(ModBlocks.STRIPPED_MAPLE_WOOD.get());
     }
 }

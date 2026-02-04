@@ -1,8 +1,10 @@
 {
   "required": true,
-  "package": "xyz.hakerboi.contentcraft.mixin",
+  "package": "xyz.wheeple.contentcraft.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "RecipeManagerMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
