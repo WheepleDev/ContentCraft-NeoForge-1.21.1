@@ -15,6 +15,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import xyz.wheeple.contentcraft.config.ContentcraftConfig;
 import xyz.wheeple.contentcraft.init.*;
+import xyz.wheeple.contentcraft.util.LangTooltips;
 
 @Mod(Contentcraft.MOD_ID)
 public class Contentcraft {
@@ -50,6 +51,9 @@ public class Contentcraft {
 
         Contentcraft.LOGGER.info("Registering Recipes...");
         ModRecipes.register(modEventBus);
+
+        Contentcraft.LOGGER.info("Registering Tooltips...");
+        LangTooltips.init();
 
         NeoForge.EVENT_BUS.register(this);
 

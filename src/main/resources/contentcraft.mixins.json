@@ -3,7 +3,10 @@
   "package": "xyz.wheeple.contentcraft.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "RecipeManagerMixin"
+    "RecipeManagerMixin",
+    "ItemStackMixin",
+    "CreativeModeTabMixin"
+
   ],
   "injectors": {
     "defaultRequire": 1
