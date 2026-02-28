@@ -12,6 +12,7 @@ import net.neoforged.neoforge.common.world.BiomeModifier;
 import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import xyz.wheeple.contentcraft.Contentcraft;
+import xyz.wheeple.contentcraft.init.ModBiomes;
 import xyz.wheeple.contentcraft.worldgen.ModPlacedFeatures;
 
 public class ModBiomeModifiers {
@@ -20,6 +21,7 @@ public class ModBiomeModifiers {
 //    public static final ResourceKey<BiomeModifier> ADD_END_BISMUTH_ORE = registerKey("add_end_bismuth_ore");
 
     public static final ResourceKey<BiomeModifier> ADD_TREE_MAPLE = registerKey("add_tree_maple");
+    public static final ResourceKey<BiomeModifier> ADD_TREE_WISTERIA = registerKey("add_tree_wisteria");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -48,11 +50,16 @@ public class ModBiomeModifiers {
 
         context.register(ADD_TREE_MAPLE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 HolderSet.direct(
-                        biomes.getOrThrow(Biomes.SNOWY_TAIGA),
-                        biomes.getOrThrow(Biomes.SNOWY_PLAINS),
-                        biomes.getOrThrow(Biomes.SNOWY_SLOPES)
+                        biomes.getOrThrow(ModBiomes.MAPLE_FOREST)
                         ),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MAPLE_PLACED_KEY)),
+                GenerationStep.Decoration.VEGETAL_DECORATION));
+
+        context.register(ADD_TREE_WISTERIA, new BiomeModifiers.AddFeaturesBiomeModifier(
+                HolderSet.direct(
+                        biomes.getOrThrow(ModBiomes.WISTERIA_GROVE)
+                ),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WISTERIA_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
     }

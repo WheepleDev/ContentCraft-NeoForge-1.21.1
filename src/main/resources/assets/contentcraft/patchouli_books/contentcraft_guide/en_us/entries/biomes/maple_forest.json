@@ -1,0 +1,19 @@
+{
+  "name": "Maple Forest",
+  "icon": "contentcraft:maple_sapling",
+  "category": "contentcraft:biomes",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Maple Forest is a new Biome that has $(l:contentcraft:woods/maple)Maple Trees$(). It is only able to generate in the overworld and is kind of rare."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/maple_forest_patchouli.png"
+      ],
+      "title": "A Maple Forest"
+    }
+  ]
+}

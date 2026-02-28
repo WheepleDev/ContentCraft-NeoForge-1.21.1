@@ -7,5 +7,6 @@
   "book_texture": "patchouli:textures/gui/book_purple.png",
   "custom_book_item": "contentcraft:contentcraft_guide",
   "show_progress": false,
-  "dont_generate_book": true
+  "dont_generate_book": true,
+  "filler_texture": "contentcraft:textures/patchouli_images/page_filler.png"
 }

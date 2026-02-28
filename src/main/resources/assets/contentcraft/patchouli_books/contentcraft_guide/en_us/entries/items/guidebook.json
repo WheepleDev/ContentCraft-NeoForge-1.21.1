@@ -7,7 +7,6 @@
     {
       "type": "patchouli:text",
       "text": "The Guidebook is given to players in survival when they first join the world. it does not have a crafting recipe right now so dont lose it :|"
-    },
-    {"type": "patchouli:empty"}
+    }
   ]
 }

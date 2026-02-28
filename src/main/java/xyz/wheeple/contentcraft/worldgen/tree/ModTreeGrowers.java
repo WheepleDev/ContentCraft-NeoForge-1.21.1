@@ -10,4 +10,7 @@ public class ModTreeGrowers {
     public static final TreeGrower MAPLE = new TreeGrower(Contentcraft.MOD_ID + ":maple",
             Optional.empty(), Optional.of(ModConfiguredFeatures.MAPLE_KEY), Optional.empty());
 
+    public static final TreeGrower WISTERIA = new TreeGrower(Contentcraft.MOD_ID + ":wisteria",
+            Optional.empty(), Optional.of(ModConfiguredFeatures.WISTERIA_KEY), Optional.empty());
+
 }

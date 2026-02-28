@@ -1,0 +1,26 @@
+{
+  "values": [
+    "contentcraft:maple_log",
+    "contentcraft:maple_wood",
+    "contentcraft:stripped_maple_log",
+    "contentcraft:stripped_maple_wood",
+    "contentcraft:maple_planks",
+    "contentcraft:maple_stairs",
+    "contentcraft:maple_slab",
+    "contentcraft:maple_fence",
+    "contentcraft:maple_fence_gate",
+    "contentcraft:maple_pressure_plate",
+    "contentcraft:maple_button",
+    "contentcraft:wisteria_log",
+    "contentcraft:wisteria_wood",
+    "contentcraft:stripped_wisteria_log",
+    "contentcraft:stripped_wisteria_wood",
+    "contentcraft:wisteria_planks",
+    "contentcraft:wisteria_stairs",
+    "contentcraft:wisteria_slab",
+    "contentcraft:wisteria_fence",
+    "contentcraft:wisteria_fence_gate",
+    "contentcraft:wisteria_pressure_plate",
+    "contentcraft:wisteria_button"
+  ]
+}

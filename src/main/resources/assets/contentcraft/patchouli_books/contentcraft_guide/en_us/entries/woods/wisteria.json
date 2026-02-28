@@ -1,0 +1,19 @@
+{
+  "name": "Wisteria Wood",
+  "icon": "contentcraft:wisteria_log",
+  "category": "contentcraft:woods",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Wisteria is a new wood type that spawns in the $(l:contentcraft:biomes/wisteria_grove)Wisteria Grove$(). All Wisteria blocks are in a tag called 'repellent_blocks' and as the name suggests, hostile mobs are repelled from any block in this tag. This was inspired by Demon Slayer and how demons are afraid of wisteria.$(br2)"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/wisteria_tree_patchouli.png"
+      ],
+      "title": "A Wisteria Tree"
+    }
+  ]
+}

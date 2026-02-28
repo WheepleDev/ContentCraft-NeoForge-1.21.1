@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "maple",
+  "ingredients": [
+    {
+      "item": "contentcraft:maple_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "contentcraft:maple_button"
+  }
+}

@@ -44,7 +44,41 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.STEEL_BLOCK)
                 .unlockedBy("has_steel_block", has(ModBlocks.STEEL_BLOCK)).save(recipeOutput);
 
+        stairBuilder(ModBlocks.MAPLE_STAIRS.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS)).group("maple")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS)).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAPLE_SLAB.get(), ModBlocks.MAPLE_PLANKS.get());
 
+        buttonBuilder(ModBlocks.MAPLE_BUTTON.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("maple")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get())).save(recipeOutput);
+        pressurePlate(recipeOutput, ModBlocks.MAPLE_PRESSURE_PLATE.get(), ModBlocks.MAPLE_PLANKS.get());
+
+        fenceBuilder(ModBlocks.MAPLE_FENCE.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("maple")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.MAPLE_FENCE_GATE.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("maple")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get())).save(recipeOutput);
+
+        doorBuilder(ModBlocks.MAPLE_DOOR.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("maple")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.MAPLE_TRAPDOOR.get(), Ingredient.of(ModBlocks.MAPLE_PLANKS.get())).group("maple")
+                .unlockedBy("has_maple_planks", has(ModBlocks.MAPLE_PLANKS.get())).save(recipeOutput);
+
+        stairBuilder(ModBlocks.WISTERIA_STAIRS.get(), Ingredient.of(ModBlocks.WISTERIA_PLANKS)).group("wisteria")
+                .unlockedBy("has_wisteria_planks", has(ModBlocks.WISTERIA_PLANKS)).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WISTERIA_SLAB.get(), ModBlocks.WISTERIA_PLANKS.get());
+
+        buttonBuilder(ModBlocks.WISTERIA_BUTTON.get(), Ingredient.of(ModBlocks.WISTERIA_PLANKS.get())).group("wisteria")
+                .unlockedBy("has_wisteria_planks", has(ModBlocks.WISTERIA_PLANKS.get())).save(recipeOutput);
+        pressurePlate(recipeOutput, ModBlocks.WISTERIA_PRESSURE_PLATE.get(), ModBlocks.WISTERIA_PLANKS.get());
+
+        fenceBuilder(ModBlocks.WISTERIA_FENCE.get(), Ingredient.of(ModBlocks.WISTERIA_PLANKS.get())).group("wisteria")
+                .unlockedBy("has_wisteria_planks", has(ModBlocks.WISTERIA_PLANKS.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.WISTERIA_FENCE_GATE.get(), Ingredient.of(ModBlocks.WISTERIA_PLANKS.get())).group("wisteria")
+                .unlockedBy("has_wisteria_planks", has(ModBlocks.WISTERIA_PLANKS.get())).save(recipeOutput);
+
+        doorBuilder(ModBlocks.WISTERIA_DOOR.get(), Ingredient.of(ModBlocks.WISTERIA_PLANKS.get())).group("wisteria")
+                .unlockedBy("has_wisteria_planks", has(ModBlocks.WISTERIA_PLANKS.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.WISTERIA_TRAPDOOR.get(), Ingredient.of(ModBlocks.WISTERIA_PLANKS.get())).group("wisteria")
+                .unlockedBy("has_wisteria_planks", has(ModBlocks.WISTERIA_PLANKS.get())).save(recipeOutput);
 
 
 //        List<ItemLike> XAENON_SMELTABLES = List.of(ModItems.RAW_XAENON, ModBlocks.XAENON_ORE);

@@ -1,0 +1,24 @@
+{
+  "name": "Xaenon Armor",
+  "icon": "contentcraft:xaenon_chestplate",
+  "category": "contentcraft:armory",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Xaenon Armor is an endgame Armor. they rank above netherite in terms of stats, but have the same durability as diamond tools. This is because Xaenon tools and armor is meant for exploring the end like how gold armor and tools are meant for exploring the nether. Each piece of Xaenon Armor has its own special abilites. They are listed in their tooltips as well.$(br2)"
+    },
+    {
+      "title": "Abilities",
+      "type": "patchouli:text",
+      "text": " - Xaenon Helmet: When Worn allows you to look at Endermen without them getting angry.$(br2) - Xaenon Chestplate: When Worn gives you more resistance to gaining levitation from shulker projectiles.$(br2) - Xaenon Leggings: When Worn and while falling in the void, an Ender Pearl is consumed to teleport you to a nearby island. (20% chance for the pearl to shatter).$(br2) - Xaenon Boots: When Worn allows you to sneak faster on endstone (useful for bridging in the end).$(br2)"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/xaenon_tools_patchouli.png"
+      ],
+      "title": "Xaenon Tools"
+    }
+  ]
+}

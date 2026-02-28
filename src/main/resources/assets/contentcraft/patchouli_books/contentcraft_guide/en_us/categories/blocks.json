@@ -1,6 +1,6 @@
 {
   "name": "Blocks",
   "description": "All the Blocks in contentcraft",
-  "icon": "minecraft:stone",
-  "sortnum": 3
+  "icon": "contentcraft:steel_block",
+  "sortnum": 2
 }

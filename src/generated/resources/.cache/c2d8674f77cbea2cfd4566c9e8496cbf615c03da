@@ -1,8 +1,16 @@
-// 1.21.1	2026-02-02T17:01:25.0683639	Item Models: contentcraft
+// 1.21.1	2026-02-28T12:54:06.3551841	Item Models: contentcraft
 343b8a8afa7c6f7c05558b120e0897a90593a9a9 assets/contentcraft/models/item/contentcraft_guide.json
+3e7765b953043ebae7bc028137cd1f7068df7a53 assets/contentcraft/models/item/maple_button.json
+a461d64d8e8148e87a0c933c13323b0056423312 assets/contentcraft/models/item/maple_door.json
+d790a210b266d8270565f8ac6d98cec5c8f76d1b assets/contentcraft/models/item/maple_fence.json
 20c2b379e610585e7623e5806a64ff7a2bbccfd9 assets/contentcraft/models/item/maple_sapling.json
 6ee28ec9587142533e56537d468e88f582f99d3d assets/contentcraft/models/item/netherite_chunk.json
 84a3e653668feaaad6a020d71c18d85486ef6afd assets/contentcraft/models/item/steel_ingot.json
+fcb9deec6430e2cfa5f1ec81f4a4ee43c11e65b0 assets/contentcraft/models/item/wisteria_button.json
+f263e5b24d30ae8f5bd2cc5137e6fdc639e1ac39 assets/contentcraft/models/item/wisteria_door.json
+4681ec010e246f7200ee06a907476fb80cfce88c assets/contentcraft/models/item/wisteria_fence.json
+9889fc53afb313206939164168e15ba9155f2817 assets/contentcraft/models/item/wisteria_pod.json
+24c2c98c1446ff6bfdb4104a97603d3e7b56e610 assets/contentcraft/models/item/wisteria_sapling.json
 65a422aed896148cfe2bd3790fa1c70de7da3e6d assets/contentcraft/models/item/xaenon_axe.json
 4050fd784d1f947b16897d4370d7d6797290ca84 assets/contentcraft/models/item/xaenon_boots.json
 a1656f93efa482d3c3ddef7aa3cbb0abbf0713da assets/contentcraft/models/item/xaenon_boots_amethyst_trim.json

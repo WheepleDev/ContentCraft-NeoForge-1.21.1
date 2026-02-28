@@ -1,5 +1,6 @@
 package xyz.wheeple.contentcraft;
 
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.ModList;
 import org.slf4j.Logger;
 
@@ -13,9 +14,15 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 import xyz.wheeple.contentcraft.config.ContentcraftConfig;
 import xyz.wheeple.contentcraft.init.*;
 import xyz.wheeple.contentcraft.util.LangTooltips;
+import xyz.wheeple.contentcraft.worldgen.biome.MapleForestRegion;
+import xyz.wheeple.contentcraft.worldgen.biome.MapleForestRuleSurfaceData;
+import xyz.wheeple.contentcraft.worldgen.biome.WisteriaGroveRegion;
+import xyz.wheeple.contentcraft.worldgen.biome.WisteriaGroveRuleSurfaceData;
 
 @Mod(Contentcraft.MOD_ID)
 public class Contentcraft {
@@ -55,6 +62,9 @@ public class Contentcraft {
         Contentcraft.LOGGER.info("Registering Tooltips...");
         LangTooltips.init();
 
+
+        ModTreeDecorators.TREE_DECORATOR_TYPES.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
 
         modContainer.registerConfig(ModConfig.Type.COMMON, ContentcraftConfig.SPEC);
@@ -62,6 +72,20 @@ public class Contentcraft {
 
     private void commonSetup(FMLCommonSetupEvent event) {
         Contentcraft.LOGGER.info(STARTUP_TEXT.formatted(version));
+
+        event.enqueueWork(() -> {
+            Regions.register(new MapleForestRegion(
+                    ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_maple"), 5));
+
+            SurfaceRuleManager.addSurfaceRules(
+                    SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, MapleForestRuleSurfaceData.makeRules());
+
+            Regions.register(new WisteriaGroveRegion(
+                    ResourceLocation.fromNamespaceAndPath(MOD_ID, "overworld_wisteria"), 5));
+
+            SurfaceRuleManager.addSurfaceRules(
+                    SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, WisteriaGroveRuleSurfaceData.makeRules());
+        });
     }
 
     @SubscribeEvent

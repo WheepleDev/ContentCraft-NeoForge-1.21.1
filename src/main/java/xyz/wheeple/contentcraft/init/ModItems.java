@@ -1,11 +1,15 @@
 package xyz.wheeple.contentcraft.init;
 
+import net.minecraft.world.entity.monster.EnderMan;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xyz.wheeple.contentcraft.Contentcraft;
 import xyz.wheeple.contentcraft.item.ContentCraftGuideItem;
+import xyz.wheeple.contentcraft.item.WisteriaPodItem;
 
 public class ModItems {
 
@@ -45,7 +49,12 @@ public class ModItems {
 
     public static final DeferredItem<ArmorItem> XAENON_HELMET = ITEMS.register("xaenon_helmet",
             () -> new ArmorItem(ModArmorMaterials.XAENON_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
-                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))));
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(19))) {
+                @Override
+                public boolean isEnderMask(ItemStack stack, Player player, EnderMan endermanEntity) {
+                    return true;
+                }
+            });
     public static final DeferredItem<ArmorItem> XAENON_CHESTPLATE = ITEMS.register("xaenon_chestplate",
             () -> new ArmorItem(ModArmorMaterials.XAENON_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(19))));
@@ -55,6 +64,10 @@ public class ModItems {
     public static final DeferredItem<ArmorItem> XAENON_BOOTS = ITEMS.register("xaenon_boots",
             () -> new ArmorItem(ModArmorMaterials.XAENON_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(19))));
+
+    public static final DeferredItem<Item> WISTERIA_POD = ITEMS.register("wisteria_pod",
+            () -> new WisteriaPodItem(new Item.Properties()
+                    .food(new FoodProperties.Builder().nutrition(2).saturationModifier(0.1f).build())));
 
 
 

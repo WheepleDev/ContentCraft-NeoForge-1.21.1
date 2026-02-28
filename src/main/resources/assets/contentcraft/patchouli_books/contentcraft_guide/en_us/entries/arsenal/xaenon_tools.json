@@ -1,0 +1,19 @@
+{
+  "name": "Xaenon Tools",
+  "icon": "contentcraft:xaenon_sword",
+  "category": "contentcraft:arsenal",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Xaenon Tools are an endgame toolset. they rank above netherite in terms of stats, but have the same durability as diamond tools. This is because Xaenon tools and armor is meant for exploring the end like how gold armor and tools are meant for exploring the nether."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/xaenon_tools_patchouli.png"
+      ],
+      "title": "Xaenon Tools"
+    }
+  ]
+}

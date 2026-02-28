@@ -40,26 +40,34 @@ public class LangTooltips {
         String baseKey = "tooltip." + namespace + "." + path;
         String alwaysKey = "tooltip.always." + namespace + "." + path;
 
-        addFormattedLines(tooltip, alwaysKey);
+        // Use an index to keep things below the title (Index 0)
+        int insertionIndex = 1;
+
+        // Add "Always" tooltips at the top
+        insertionIndex = addFormattedLines(tooltip, alwaysKey, insertionIndex);
 
         if (I18n.exists(baseKey + ".0")) {
             if (event.getFlags().hasShiftDown()) {
-                tooltip.add(Component.translatable("tooltip.contentcraft.generic.shift_down"));
-                tooltip.add(Component.empty());
-                addFormattedLines(tooltip, baseKey);
+                tooltip.add(insertionIndex++, Component.translatable("tooltip.contentcraft.generic.shift_down"));
+                tooltip.add(insertionIndex++, Component.empty());
+                addFormattedLines(tooltip, baseKey, insertionIndex);
             } else {
-                tooltip.add(Component.translatable("tooltip.contentcraft.generic.shift_up"));
+                tooltip.add(insertionIndex++, Component.translatable("tooltip.contentcraft.generic.shift_up"));
             }
         }
     }
 
-    private static void addFormattedLines(List<Component> tooltip, String baseKey) {
+    private static int addFormattedLines(List<Component> tooltip, String baseKey, int index) {
         for (int i = 0; i < 100; i++) {
             String key = baseKey + "." + i;
             if (!I18n.exists(key)) break;
-            tooltip.add(decodeTranslationKey(key));
+
+            // Ensure we don't go out of bounds if the list is somehow empty
+            int pos = Math.min(index, tooltip.size());
+            tooltip.add(pos, decodeTranslationKey(key));
+            index++;
         }
-    }
+        return index;    }
 
     public static Component decodeTranslationKey(String key) {
         return decodeString(I18n.get(key));

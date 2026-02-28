@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "wisteria",
+  "key": {
+    "#": {
+      "item": "contentcraft:wisteria_planks"
+    }
+  },
+  "pattern": [
+    "##",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "id": "contentcraft:wisteria_door"
+  }
+}

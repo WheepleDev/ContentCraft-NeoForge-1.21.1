@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "contentcraft:block/maple_planks",
+    "side": "contentcraft:block/maple_planks",
+    "top": "contentcraft:block/maple_planks"
+  }
+}

@@ -1,10 +1,6 @@
 {
   "type": "neoforge:add_features",
-  "biomes": [
-    "minecraft:snowy_taiga",
-    "minecraft:snowy_plains",
-    "minecraft:snowy_slopes"
-  ],
+  "biomes": "contentcraft:maple_forest",
   "features": "contentcraft:maple_placed",
   "step": "vegetal_decoration"
 }

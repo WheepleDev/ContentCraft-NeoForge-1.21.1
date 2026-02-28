@@ -21,7 +21,7 @@ public class ModPlacedFeatures {
 //    public static final ResourceKey<PlacedFeature> END_BISMUTH_ORE_PLACED_KEY = registerKey("end_bismuth_ore_placed");
 
     public static final ResourceKey<PlacedFeature> MAPLE_PLACED_KEY = registerKey("maple_placed");
-
+    public static final ResourceKey<PlacedFeature> WISTERIA_PLACED_KEY = registerKey("wisteria_placed");
 //    public static final ResourceKey<PlacedFeature> GOJI_BERRY_BUSH_PLACED_KEY = registerKey("goji_berry_bush_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -35,8 +35,18 @@ public class ModPlacedFeatures {
 //                ModOrePlacement.commonOrePlacement(12, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 //
         register(context, MAPLE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.MAPLE_KEY),
-                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
-                        ModBlocks.MAPLE_SAPLING.get()));
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(15, 0.1f, 5),
+                        ModBlocks.MAPLE_SAPLING.get()
+                )
+        );
+
+        register(context, WISTERIA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.WISTERIA_KEY),
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(15, 0.1f, 5),
+                        ModBlocks.WISTERIA_SAPLING.get()
+                )
+        );
 
 //        register(context, GOJI_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GOJI_BERRY_BUSH_KEY),
 //                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));

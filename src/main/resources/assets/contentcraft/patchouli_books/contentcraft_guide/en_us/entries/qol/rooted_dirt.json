@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "I decided to add this recipe because i was watching $(l:https://www.youtube.com/@daltona.c.e)ACE$() and he was making a rooted dirt farm and it didnt work, so then he crashed out. This ones for you Ace :D."
+      "text": "I decided to add this recipe because i was watching one of $(l:https://www.youtube.com/@daltona.c.e)ACE$()'s streams and he was making a rooted dirt farm on bedrock and it didn't work, so then he proceded to crash out. This feature was made for you Ace :D"
     },
     {
       "type": "patchouli:crafting",

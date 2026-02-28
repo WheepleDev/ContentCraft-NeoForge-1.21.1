@@ -61,6 +61,18 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.STEEL_INGOT.get());
         saplingItem(ModBlocks.MAPLE_SAPLING);
+        buttonItem(ModBlocks.MAPLE_BUTTON, ModBlocks.MAPLE_PLANKS);
+        fenceItem(ModBlocks.MAPLE_FENCE, ModBlocks.MAPLE_PLANKS);
+
+        basicItem(ModBlocks.MAPLE_DOOR.asItem());
+
+        saplingItem(ModBlocks.WISTERIA_SAPLING);
+        buttonItem(ModBlocks.WISTERIA_BUTTON, ModBlocks.WISTERIA_PLANKS);
+        fenceItem(ModBlocks.WISTERIA_FENCE, ModBlocks.WISTERIA_PLANKS);
+
+        basicItem(ModBlocks.WISTERIA_DOOR.asItem());
+
+        basicItem(ModItems.WISTERIA_POD.get());
         
     }
 
@@ -68,6 +80,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.parse("item/generated")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(Contentcraft.MOD_ID,"block/" + item.getId().getPath()));
+    }
+
+    public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(Contentcraft.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void fenceItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  ResourceLocation.fromNamespaceAndPath(Contentcraft.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
+    }
+
+    public void wallItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.fromNamespaceAndPath(Contentcraft.MOD_ID,
+                        "block/" + baseBlock.getId().getPath()));
     }
 
     // Shoutout to El_Redstoniano for making this

@@ -1,4 +1,7 @@
-// 1.21.1	2026-02-04T17:10:10.785764	Registries
-bd24a5e3bda47279db2cc14402e4d3a3b80041a5 data/contentcraft/neoforge/biome_modifier/add_tree_maple.json
+// 1.21.1	2026-02-28T13:58:42.3051556	Registries
+c29272fd88cfc3ce127c997901749bdc4adf0eed data/contentcraft/neoforge/biome_modifier/add_tree_maple.json
+8a92928c6ea00aef590a26afb32a4aec3eab0af7 data/contentcraft/neoforge/biome_modifier/add_tree_wisteria.json
 84f708077408dfad0621228b1e003e893a7f121a data/contentcraft/worldgen/configured_feature/maple_key.json
-8123a766827dced98e38803a7e6b72e4c223edb7 data/contentcraft/worldgen/placed_feature/maple_placed.json
+17aead969afb8d1b5dc392c5ddd091b5134b31ae data/contentcraft/worldgen/configured_feature/wisteria_key.json
+a813307475532c29590bd3b3e5b9423d3a849165 data/contentcraft/worldgen/placed_feature/maple_placed.json
+e3a20b5e8c0fb5f7f7b166b172e1c2032abd72ea data/contentcraft/worldgen/placed_feature/wisteria_placed.json

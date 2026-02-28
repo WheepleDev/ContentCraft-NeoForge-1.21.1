@@ -1,0 +1,19 @@
+{
+  "name": "Wisteria Grove",
+  "icon": "contentcraft:wisteria_sapling",
+  "category": "contentcraft:biomes",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The Wisteria Grove is a new Biome that has $(l:contentcraft:woods/wisteria)Wisteria Trees$(). It is only able to generate in the overworld and is inspired by demon slayer."
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "contentcraft:textures/patchouli_images/wisteria_forest_patchouli.png"
+      ],
+      "title": "A Wisteria Forest"
+    }
+  ]
+}

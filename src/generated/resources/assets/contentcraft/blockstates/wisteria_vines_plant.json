@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "contentcraft:block/wisteria_vines_plant"
+    },
+    "lit=true": {
+      "model": "contentcraft:block/wisteria_vines_plant_lit"
+    }
+  }
+}

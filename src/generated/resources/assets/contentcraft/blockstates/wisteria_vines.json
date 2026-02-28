@@ -1,0 +1,160 @@
+{
+  "variants": {
+    "age=0,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=0,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=1,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=1,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=10,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=10,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=11,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=11,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=12,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=12,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=13,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=13,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=14,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=14,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=15,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=15,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=16,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=16,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=17,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=17,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=18,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=18,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=19,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=19,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=2,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=2,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=20,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=20,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=21,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=21,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=22,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=22,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=23,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=23,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=24,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=24,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=25,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=25,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=3,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=3,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=4,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=4,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=5,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=5,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=6,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=6,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=7,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=7,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=8,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=8,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    },
+    "age=9,lit=false": {
+      "model": "contentcraft:block/wisteria_vines"
+    },
+    "age=9,lit=true": {
+      "model": "contentcraft:block/wisteria_vines_lit"
+    }
+  }
+}

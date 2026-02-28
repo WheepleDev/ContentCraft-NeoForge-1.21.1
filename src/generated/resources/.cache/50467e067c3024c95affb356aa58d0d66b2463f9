@@ -1,4 +1,15 @@
-// 1.21.1	2026-02-02T17:39:55.7723387	Tags for minecraft:block mod id contentcraft
-696f68db688660225d84a63c696f9a11c837e08a data/minecraft/tags/block/logs_that_burn.json
+// 1.21.1	2026-02-28T14:59:16.4597798	Tags for minecraft:block mod id contentcraft
+59636105c32411bd5581b3d915b293afe5bdb1e5 data/contentcraft/tags/block/hostile_mob_repellent_blocks.json
+57cf3bf8439819937a01ea8ae665cb3ce4d5f4dc data/minecraft/tags/block/climbable.json
+b59a214a58b6720f90ac2d41ee23c4a6d56a92f8 data/minecraft/tags/block/fence_gates.json
+027cfb238afaca14eecf881113aa9a02c0dc8598 data/minecraft/tags/block/leaves.json
+9c7eeb2463e4b8a25a86001b80e3051a76fbe0e8 data/minecraft/tags/block/logs_that_burn.json
+85222571029568560bf10eaf2478615e8eed6641 data/minecraft/tags/block/mineable/axe.json
 908282b03d8494f196a84c1285aba3942a44c1d0 data/minecraft/tags/block/mineable/pickaxe.json
 e0e3cd7f930fe07e3c48bcaa41d9372f9027fc8e data/minecraft/tags/block/needs_diamond_tool.json
+1f7df5d1f40c7459b9e937a8d7a7fee6c4c390f6 data/minecraft/tags/block/planks.json
+b6c7f6fe4b3c32fd1c0389374d7271e551db2bfa data/minecraft/tags/block/wooden_buttons.json
+8370edb9807f24de117ebc5bceb0bb6d37b19ab7 data/minecraft/tags/block/wooden_fences.json
+8ecfb0c27ca491c7b5ac9e4cac67ca38fa63fd9a data/minecraft/tags/block/wooden_pressure_plates.json
+c6c8a26cda45037cfe96a0b73cc45e0f218c3119 data/minecraft/tags/block/wooden_slabs.json
+dd3a1fbd5b3432d9b69d9286d53c28110981aabc data/minecraft/tags/block/wooden_stairs.json

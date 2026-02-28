@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "contentcraft:block/wisteria_slab"
+    },
+    "type=double": {
+      "model": "contentcraft:block/wisteria_planks"
+    },
+    "type=top": {
+      "model": "contentcraft:block/wisteria_slab_top"
+    }
+  }
+}

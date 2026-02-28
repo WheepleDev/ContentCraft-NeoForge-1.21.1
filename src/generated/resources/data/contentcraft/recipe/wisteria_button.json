@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wisteria",
+  "ingredients": [
+    {
+      "item": "contentcraft:wisteria_planks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "contentcraft:wisteria_button"
+  }
+}

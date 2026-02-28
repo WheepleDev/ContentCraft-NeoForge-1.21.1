@@ -15,7 +15,6 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Contentcraft.MOD_ID);
 
-    // ITEMS TAB: Tools, Armor, and Guides
     public static final Supplier<CreativeModeTab> ITEMS_TAB =
             CREATIVE_TABS.register("items", () ->
                     CreativeModeTab.builder()
@@ -23,13 +22,31 @@ public class ModCreativeModeTabs {
                             .icon(() -> new ItemStack(ModItems.CONTENTCRAFT_GUIDE.get()))
                             .displayItems((parameters, output) -> {
                                 output.accept(ModItems.CONTENTCRAFT_GUIDE.get());
+                            })
+                            .build()
+            );
 
+    public static final Supplier<CreativeModeTab> ARSENAL_TAB =
+            CREATIVE_TABS.register("arsenal", () ->
+                    CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.contentcraft.arsenal"))
+                            .icon(() -> new ItemStack(ModItems.XAENON_SWORD.get()))
+                            .displayItems((parameters, output) -> {
                                 output.accept(ModItems.XAENON_SWORD.get());
                                 output.accept(ModItems.XAENON_PICKAXE.get());
                                 output.accept(ModItems.XAENON_AXE.get());
                                 output.accept(ModItems.XAENON_SHOVEL.get());
                                 output.accept(ModItems.XAENON_HOE.get());
+                            })
+                            .build()
+            );
 
+    public static final Supplier<CreativeModeTab> ARMORY_TAB =
+            CREATIVE_TABS.register("armory", () ->
+                    CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.contentcraft.armory"))
+                            .icon(() -> new ItemStack(ModItems.XAENON_CHESTPLATE.get()))
+                            .displayItems((parameters, output) -> {
                                 output.accept(ModItems.XAENON_HELMET.get());
                                 output.accept(ModItems.XAENON_CHESTPLATE.get());
                                 output.accept(ModItems.XAENON_LEGGINGS.get());
@@ -38,7 +55,6 @@ public class ModCreativeModeTabs {
                             .build()
             );
 
-    // BLOCKS TAB: All building blocks, machines, and wood
     public static final Supplier<CreativeModeTab> BLOCKS_TAB =
             CREATIVE_TABS.register("blocks", () ->
                     CreativeModeTab.builder()
@@ -56,19 +72,10 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.XAENON_CLUSTER.get());
 
                                 output.accept(ModBlocks.STEEL_BLOCK.get());
-
-                                output.accept(ModBlocks.MAPLE_LOG.get());
-                                output.accept(ModBlocks.MAPLE_WOOD.get());
-                                output.accept(ModBlocks.STRIPPED_MAPLE_LOG.get());
-                                output.accept(ModBlocks.STRIPPED_MAPLE_WOOD.get());
-                                output.accept(ModBlocks.MAPLE_PLANKS.get());
-                                output.accept(ModBlocks.MAPLE_SAPLING.get());
-                                output.accept(ModBlocks.MAPLE_LEAVES.get());
                             })
                             .build()
             );
 
-    // MATERIALS TAB: Raw resources, ingots, and chunks
     public static final Supplier<CreativeModeTab> MATERIALS_TAB =
             CREATIVE_TABS.register("materials", () ->
                     CreativeModeTab.builder()
@@ -79,6 +86,48 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.XAENON_SHARD.get());
                                 output.accept(ModItems.STEEL_INGOT.get());
                                 output.accept(ModItems.NETHERITE_CHUNK.get());
+                            })
+                            .build()
+            );
+
+    public static final Supplier<CreativeModeTab> WOODS_TAB =
+            CREATIVE_TABS.register("woods", () ->
+                    CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.contentcraft.woods"))
+                            .icon(() -> new ItemStack(ModBlocks.MAPLE_LOG.get()))
+                            .displayItems((parameters, output) -> {
+                                output.accept(ModBlocks.MAPLE_SAPLING.get());
+                                output.accept(ModBlocks.MAPLE_LEAVES.get());
+                                output.accept(ModBlocks.MAPLE_LOG.get());
+                                output.accept(ModBlocks.MAPLE_WOOD.get());
+                                output.accept(ModBlocks.STRIPPED_MAPLE_LOG.get());
+                                output.accept(ModBlocks.STRIPPED_MAPLE_WOOD.get());
+                                output.accept(ModBlocks.MAPLE_PLANKS.get());
+                                output.accept(ModBlocks.MAPLE_STAIRS.get());
+                                output.accept(ModBlocks.MAPLE_SLAB.get());
+                                output.accept(ModBlocks.MAPLE_PRESSURE_PLATE.get());
+                                output.accept(ModBlocks.MAPLE_BUTTON.get());
+                                output.accept(ModBlocks.MAPLE_FENCE.get());
+                                output.accept(ModBlocks.MAPLE_FENCE_GATE.get());
+                                output.accept(ModBlocks.MAPLE_DOOR.get());
+                                output.accept(ModBlocks.MAPLE_TRAPDOOR.get());
+
+                                output.accept(ModBlocks.WISTERIA_SAPLING.get());
+                                output.accept(ModBlocks.WISTERIA_LEAVES.get());
+                                output.accept(ModBlocks.WISTERIA_LOG.get());
+                                output.accept(ModBlocks.WISTERIA_WOOD.get());
+                                output.accept(ModBlocks.STRIPPED_WISTERIA_LOG.get());
+                                output.accept(ModBlocks.STRIPPED_WISTERIA_WOOD.get());
+                                output.accept(ModBlocks.WISTERIA_PLANKS.get());
+                                output.accept(ModBlocks.WISTERIA_STAIRS.get());
+                                output.accept(ModBlocks.WISTERIA_SLAB.get());
+                                output.accept(ModBlocks.WISTERIA_PRESSURE_PLATE.get());
+                                output.accept(ModBlocks.WISTERIA_BUTTON.get());
+                                output.accept(ModBlocks.WISTERIA_FENCE.get());
+                                output.accept(ModBlocks.WISTERIA_FENCE_GATE.get());
+                                output.accept(ModBlocks.WISTERIA_DOOR.get());
+                                output.accept(ModBlocks.WISTERIA_TRAPDOOR.get());
+                                output.accept(ModItems.WISTERIA_POD.get());
                             })
                             .build()
             );

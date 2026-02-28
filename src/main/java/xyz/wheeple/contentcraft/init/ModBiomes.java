@@ -10,6 +10,7 @@ import xyz.wheeple.contentcraft.Contentcraft;
 
 public class ModBiomes {
         public static final ResourceKey<Biome> MAPLE_FOREST = register("maple_forest");
+    public static final ResourceKey<Biome> WISTERIA_GROVE = register("wisteria_grove");
 
         private static ResourceKey<Biome> register(String name) {
             return ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(Contentcraft.MOD_ID, name));
