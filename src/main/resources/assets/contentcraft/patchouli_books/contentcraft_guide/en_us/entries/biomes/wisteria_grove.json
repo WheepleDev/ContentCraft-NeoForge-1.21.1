@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "The Wisteria Grove is a new Biome that has $(l:contentcraft:woods/wisteria)Wisteria Trees$(). It is only able to generate in the overworld and is inspired by demon slayer."
+      "text": "$(6)$(l)Added in $(c)0.3.0$()$(br)The Wisteria Grove is a new Biome that has $(l:contentcraft:woods/wisteria)Wisteria Trees$(). It is only able to generate in the overworld and is inspired by demon slayer."
     },
     {
       "type": "patchouli:image",

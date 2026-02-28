@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Xaenon is a new endgame material, only found in the End Dimension. You can get xaenon shards from budding xaenon crystal blocks, which spawn in piles in the end."
+      "text": "$(6)$(l)Added in $(c)0.1.0$()$(br)Xaenon is a new endgame material, only found in the End Dimension. You can get xaenon shards from budding xaenon crystal blocks, which spawn in piles in the end."
     },
     {
       "type": "patchouli:image",

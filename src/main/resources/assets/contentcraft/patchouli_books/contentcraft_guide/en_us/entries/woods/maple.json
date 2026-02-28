@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Maple is a new wood type that spawns in the $(l:contentcraft:biomes/maple_forest)Maple Forest$(). You can place a $(l:contentcraft:blocks/tap)Tap$() on a maple log and below it place a cauldron or a bucket and it will extract 1 mb of maple sap every 20 ticks into the container. A $(l:contentcraft:blocks/dehydrator)Dehydrator$() can be used to turn maple sap into syrup by removing all the water from the sap. 1B of maple sap turns into 100mb of syrup.$(br)$(6)$(l)SYRUP & SAP NOT ADDED YET!!$()$(br2)"
+      "text": "$(6)$(l)Added in $(c)0.1.0$()$(br)Maple is a new wood type that spawns in the $(l:contentcraft:biomes/maple_forest)Maple Forest$(). You can place a $(l:contentcraft:blocks/tap)Tap$() on a maple log and below it place a cauldron or a bucket and it will extract 1 mb of maple sap every 20 ticks into the container. A $(l:contentcraft:blocks/dehydrator)Dehydrator$() can be used to turn maple sap into syrup by removing all the water from the sap. 1B of maple sap turns into 100mb of syrup.$(br)$(6)$(l)SYRUP & SAP NOT ADDED YET!!$()$(br2)"
     },
     {
       "type": "patchouli:image",

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "ContentCraft is a unique Minecraft mod created with one goal in mind, to add what features Mojang won’t, while making it feel like Mojang did add it. It introduces new content, mechanics, and features that seamlessly blend into the vanilla experience, breathing fresh life into the game you already know and love."
+      "text": "$(6)$(l)Added in $(c)0.1.0$()$(br)ContentCraft is a unique Minecraft mod created with one goal in mind, to add what features Mojang won’t, while making it feel like Mojang did add it. It introduces new content, mechanics, and features that seamlessly blend into the vanilla experience, breathing fresh life into the game you already know and love."
     },
     {
       "type": "patchouli:image",

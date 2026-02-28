@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Steel is a new Midgame material, used for machinery and tech items."
+      "text": "$(6)$(l)Added in $(c)0.1.0$()$(br)Steel is a new Midgame material, used for machinery and tech items."
     },
     {
       "type": "patchouli:text",

@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Xaenon Tools are an endgame toolset. they rank above netherite in terms of stats, but have the same durability as diamond tools. This is because Xaenon tools and armor is meant for exploring the end like how gold armor and tools are meant for exploring the nether."
+      "text": "$(6)$(l)Added in $(c)0.1.0$()$(br)Xaenon Tools are an endgame toolset. they rank above netherite in terms of stats, but have the same durability as diamond tools. This is because Xaenon tools and armor is meant for exploring the end like how gold armor and tools are meant for exploring the nether."
     },
     {
       "type": "patchouli:image",
